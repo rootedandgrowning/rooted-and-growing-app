@@ -1,0 +1,224 @@
+// Oracle Card Data - 12 Placeholder Cards (3 per season)
+
+export interface OracleCard {
+  id: string;
+  title: string;
+  short: string;
+  description: string;
+  prompts: string[];
+  action: string;
+  tags: string[];
+  image: string;
+  gradient: {
+    start: string;
+    end: string;
+  };
+}
+
+export const ORACLE_CARDS: OracleCard[] = [
+  // Spring Cards (3)
+  {
+    id: 'bloom',
+    title: 'Bloom',
+    short: 'Allow yourself to bloom and flourish.',
+    description: 'Allow yourself to bloom and flourish like a beautiful flower. The Bloom card is a reminder to embrace your individuality and let your true self shine. This is your time to step into the light and show the world your authentic colors.',
+    prompts: [
+      'What makes you feel most like yourself?',
+      'Where in your life is ready to come into full color?',
+      'What part of you has been waiting to emerge?',
+    ],
+    action: 'Brew a gentle cup of tea. Take five slow breaths and name one way you'll express your full colors today.',
+    tags: ['season:spring', 'energy:expansion'],
+    image: 'bloom.png',
+    gradient: { start: '#7FAF7A', end: '#5B8C57' },
+  },
+  {
+    id: 'renewal',
+    title: 'Renewal',
+    short: 'Begin again with fresh energy.',
+    description: 'Renewal invites you to release what no longer serves you and step into a fresh beginning. Like the first green shoots of spring, you have the power to grow anew. This is a time of possibility and gentle transformation.',
+    prompts: [
+      'What are you ready to release?',
+      'What new beginning is calling to you?',
+      'How can you nurture this fresh start?',
+    ],
+    action: 'Light a candle or open a window. Take three deep breaths and set one intention for renewal.',
+    tags: ['season:spring', 'energy:rebirth'],
+    image: 'renewal.png',
+    gradient: { start: '#8FBF8A', end: '#6B9C67' },
+  },
+  {
+    id: 'hope',
+    title: 'Hope',
+    short: 'Trust in the promise of new growth.',
+    description: 'Hope is the quiet knowing that growth is always possible. Even in uncertain times, this card reminds you that seeds planted with care will eventually bloom. Keep faith in the process and in yourself.',
+    prompts: [
+      'What hope are you holding in your heart?',
+      'Where do you need to trust the timing?',
+      'What small step can you take today?',
+    ],
+    action: 'Place your hand on your heart. Breathe deeply and whisper one hope you're holding.',
+    tags: ['season:spring', 'energy:faith'],
+    image: 'hope.png',
+    gradient: { start: '#A5CF9F', end: '#81AD7B' },
+  },
+
+  // Summer Cards (3)
+  {
+    id: 'radiance',
+    title: 'Radiance',
+    short: 'Shine your light boldly and brightly.',
+    description: 'Radiance is the fullness of your expression. Like the summer sun at its peak, you are being called to shine without apology. This is your time to be seen, to share your gifts, and to illuminate the world around you.',
+    prompts: [
+      'Where are you dimming your light?',
+      'What gifts are ready to be shared?',
+      'How can you shine more fully today?',
+    ],
+    action: 'Stand in sunlight (or imagine it). Feel warmth on your face and name one way you'll shine today.',
+    tags: ['season:summer', 'energy:vitality'],
+    image: 'radiance.png',
+    gradient: { start: '#E7A04D', end: '#C88A3D' },
+  },
+  {
+    id: 'abundance',
+    title: 'Abundance',
+    short: 'Receive the fullness of life's gifts.',
+    description: 'Abundance flows when you open your hands and heart to receive. This card reminds you that there is enough—enough love, enough time, enough beauty. Practice gratitude for what is already here and watch it multiply.',
+    prompts: [
+      'What abundance is already present in your life?',
+      'Where can you open to receive more?',
+      'How can you share your abundance with others?',
+    ],
+    action: 'Write down three things you're grateful for. Feel the warmth of abundance in your chest.',
+    tags: ['season:summer', 'energy:prosperity'],
+    image: 'abundance.png',
+    gradient: { start: '#F5B05D', end: '#D8964A' },
+  },
+  {
+    id: 'joy',
+    title: 'Joy',
+    short: 'Embrace delight and celebration.',
+    description: 'Joy is your birthright. This card invites you to find pleasure in simple moments, to laugh freely, and to celebrate being alive. Let yourself feel the fullness of happiness without guilt or restraint.',
+    prompts: [
+      'What brings you pure, simple joy?',
+      'Where can you invite more playfulness?',
+      'How can you celebrate yourself today?',
+    ],
+    action: 'Do something purely for joy—dance, sing, laugh. Let yourself feel light.',
+    tags: ['season:summer', 'energy:celebration'],
+    image: 'joy.png',
+    gradient: { start: '#FFC06D', end: '#E5A559' },
+  },
+
+  // Autumn Cards (3)
+  {
+    id: 'balance',
+    title: 'Balance',
+    short: 'Find harmony between giving and receiving.',
+    description: 'Balance is the art of tending to your own needs while honoring your connections to others. Like the autumn equinox, this card asks you to assess where energy is flowing and where it needs to be redistributed. Find your center.',
+    prompts: [
+      'Where are you giving too much?',
+      'What boundary would create more balance?',
+      'How can you honor both yourself and others?',
+    ],
+    action: 'Brew a calming tea. Take three slow breaths and name one boundary that will help you feel steadier.',
+    tags: ['season:autumn', 'energy:equilibrium'],
+    image: 'balance.png',
+    gradient: { start: '#B26B4A', end: '#9A5D40' },
+  },
+  {
+    id: 'gratitude',
+    title: 'Gratitude',
+    short: 'Honor the harvest of your life.',
+    description: 'Gratitude is the practice of recognizing what you have cultivated and received. This card invites you to pause and appreciate the fruits of your labor, the love you've shared, and the lessons you've learned. Harvest with reverence.',
+    prompts: [
+      'What have you harvested this season?',
+      'Who or what are you deeply grateful for?',
+      'How can you honor this abundance?',
+    ],
+    action: 'Light a candle and speak aloud three things you're grateful for. Let the gratitude fill you.',
+    tags: ['season:autumn', 'energy:appreciation'],
+    image: 'gratitude.png',
+    gradient: { start: '#C27B5A', end: '#AA6948' },
+  },
+  {
+    id: 'release',
+    title: 'Release',
+    short: 'Let go of what no longer serves.',
+    description: 'Release is the sacred act of letting go. Like trees shedding their leaves, you are invited to release burdens, old patterns, and what you've been carrying for too long. Trust that in releasing, you make space for new growth.',
+    prompts: [
+      'What are you ready to let go of?',
+      'What weight have you been carrying?',
+      'How will releasing this create space for new growth?',
+    ],
+    action: 'Write down what you're releasing on paper. Tear it up or burn it safely, offering it back to the earth.',
+    tags: ['season:autumn', 'energy:surrender'],
+    image: 'release.png',
+    gradient: { start: '#D28B6A', end: '#BA7556' },
+  },
+
+  // Winter Cards (3)
+  {
+    id: 'rest',
+    title: 'Rest',
+    short: 'Embrace stillness and restoration.',
+    description: 'Rest is not laziness—it is wisdom. This card invites you to slow down, to honor your need for stillness, and to restore your energy. Like the earth in winter, you too need periods of quiet to prepare for future growth.',
+    prompts: [
+      'Where do you need to slow down?',
+      'What would true rest look like for you?',
+      'How can you give yourself permission to pause?',
+    ],
+    action: 'Lie down or sit quietly. Close your eyes for five minutes. Let yourself simply be.',
+    tags: ['season:winter', 'energy:stillness'],
+    image: 'rest.png',
+    gradient: { start: '#5E7A9C', end: '#4E6A8C' },
+  },
+  {
+    id: 'reflection',
+    title: 'Reflection',
+    short: 'Look inward with gentle wisdom.',
+    description: 'Reflection is the practice of turning your gaze inward to understand yourself more deeply. This card invites you to review your journey, to honor what you've learned, and to sit with your inner knowing. Wisdom lives within you.',
+    prompts: [
+      'What have you learned about yourself recently?',
+      'What patterns are you noticing?',
+      'What wisdom is waiting to be heard?',
+    ],
+    action: 'Journal for ten minutes without judgment. Let your thoughts flow freely onto the page.',
+    tags: ['season:winter', 'energy:introspection'],
+    image: 'reflection.png',
+    gradient: { start: '#6E8AAC', end: '#5E7A9C' },
+  },
+  {
+    id: 'faith',
+    title: 'Faith',
+    short: 'Trust in unseen growth.',
+    description: 'Faith is believing in what you cannot yet see. Like seeds resting beneath winter snow, growth is happening even when it's invisible. This card reminds you to trust the process, trust yourself, and trust that spring will come again.',
+    prompts: [
+      'What are you being asked to trust?',
+      'Where is unseen growth happening in your life?',
+      'How can you strengthen your faith?',
+    ],
+    action: 'Place your hands over your heart. Breathe deeply and affirm: "I trust the timing of my life."',
+    tags: ['season:winter', 'energy:trust'],
+    image: 'faith.png',
+    gradient: { start: '#7E9ABC', end: '#6E8AAC' },
+  },
+];
+
+// Get a random card (for daily draw)
+export const getRandomCard = (): OracleCard => {
+  const randomIndex = Math.floor(Math.random() * ORACLE_CARDS.length);
+  return ORACLE_CARDS[randomIndex];
+};
+
+// Get card by ID
+export const getCardById = (id: string): OracleCard | undefined => {
+  return ORACLE_CARDS.find((card) => card.id === id);
+};
+
+// Get cards by season
+export const getCardsBySeason = (season: string): OracleCard[] => {
+  return ORACLE_CARDS.filter((card) =>
+    card.tags.some((tag) => tag.includes(season))
+  );
+};

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "roots",
+    "title": "Roots",
+    "description": "Strengthen your roots for stability and grounding. Like a tree anchored in rich earth, you are nourished by what you return to again and again—values, practices, and people who help you feel steady.",
+    "prompts": [
+      "What practices or people help you feel most grounded?",
+      "Where do you need deeper roots before you grow higher?"
+    ],
+    "action": "Place both feet on the floor. Breathe slowly for 60 seconds and picture roots growing from your soles into the earth.",
+    "tags": ["theme:foundation", "energy:grounding", "season:any"],
+    "image": "roots.png"
+  },
+  {
+    "id": "soil",
+    "title": "Soil",
+    "description": "Tend the soil of your life so new intentions can take root. Nourish your body, mind, and spirit with inputs that enrich you, and clear what depletes you.",
+    "prompts": [
+      "What enriches your 'inner soil' right now?",
+      "What depletion can you remove or reduce this week?"
+    ],
+    "action": "Choose one nourishing input today (rest, water, movement, wholesome food) and schedule it like an appointment.",
+    "tags": ["theme:foundation", "energy:nourish", "season:any"],
+    "image": "soil.png"
+  },
+  {
+    "id": "foundation",
+    "title": "Foundation",
+    "description": "Build a reliable base for growth. Consistent, simple habits create stability so your bigger dreams can stand tall.",
+    "prompts": [
+      "Which small habit most supports your wellbeing?",
+      "What wobbly area needs shoring up?"
+    ],
+    "action": "Pick one 5-minute habit to repeat daily this week (stretching, journaling, one glass of water on waking).",
+    "tags": ["theme:foundation", "energy:stability", "season:any"],
+    "image": "foundation.png"
+  },
+  {
+    "id": "water",
+    "title": "Water",
+    "description": "Offer yourself steady nourishment. As water sustains a garden, regular care sustains your growth—physically, emotionally, spiritually.",
+    "prompts": [
+      "Where are you thirsty for care or attention?",
+      "What drip-by-drip practice would restore you?"
+    ],
+    "action": "Sip a calming tea slowly. With each swallow, repeat: "I replenish myself."",
+    "tags": ["theme:nourish", "energy:soothe", "season:any"],
+    "image": "water.png"
+  },
+  {
+    "id": "sunlight",
+    "title": "Sunlight",
+    "description": "Invite warmth and light. Choose perspectives, places, and people that help you photosynthesize hope into energy.",
+    "prompts": [
+      "What brings light into your day?",
+      "Where could you step out of the shade and be seen?"
+    ],
+    "action": "Spend 3 minutes in natural light. Turn your face toward it and take 10 slow breaths.",
+    "tags": ["theme:nourish", "energy:vitality", "season:any"],
+    "image": "sunlight.png"
+  },
+  {
+    "id": "nurture",
+    "title": "Nurture",
+    "description": "Tend gently to what you want to grow—your body, your work, your relationships. Care is not a detour; it is the path.",
+    "prompts": [
+      "What do you most want to nurture this month?",
+      "How can you make care feel simple and repeatable?"
+    ],
+    "action": "Write one loving note—to yourself or someone dear—and place it somewhere it will be found.",
+    "tags": ["theme:nourish", "energy:care", "season:any"],
+    "image": "nurture.png"
+  },
+  {
+    "id": "seedling",
+    "title": "Seedling",
+    "description": "Honor tender beginnings. Protect your new idea or habit with patience and small, consistent steps.",
+    "prompts": [
+      "What is sprouting in your life right now?",
+      "What boundary would protect this tender start?"
+    ],
+    "action": "Name one tiny step you can take in the next 24 hours to support your seedling—and do only that.",
+    "tags": ["theme:growth", "energy:new_beginnings", "season:spring"],
+    "image": "seedling.png"
+  },
+  {
+    "id": "bloom",
+    "title": "Bloom",
+    "description": "Allow your true colors to shine. Blooming isn't perfection—it's presence. Express yourself as you are, where you are.",
+    "prompts": [
+      "Where are you ready to be more visible?",
+      "What unique quality wants to be celebrated?"
+    ],
+    "action": "Share something you made or believe—in a post, a call, or a note to a friend.",
+    "tags": ["theme:growth", "energy:expression", "season:summer"],
+    "image": "bloom.png"
+  },
+  {
+    "id": "expand",
+    "title": "Expand",
+    "description": "Widen your horizons. Say yes to opportunities that stretch you while staying aligned with your values.",
+    "prompts": [
+      "What invitation feels expansive (and a little brave)?",
+      "Where can you create more room—time, space, or support?"
+    ],
+    "action": "Make one outreach today (email, message, application) that opens a door.",
+    "tags": ["theme:growth", "energy:expansion", "season:any"],
+    "image": "expand.png"
+  },
+  {
+    "id": "prune",
+    "title": "Prune",
+    "description": "Release what no longer serves so energy can return to what matters. Cutting back is an act of devotion to your future growth.",
+    "prompts": [
+      "What habit or commitment is draining you?",
+      "What could you lovingly say no to this week?"
+    ],
+    "action": "Choose one low-return obligation to pause or cancel. Reclaim that time for rest or focus.",
+    "tags": ["theme:transformation", "energy:release", "season:autumn"],
+    "image": "prune.png"
+  },
+  {
+    "id": "compost",
+    "title": "Compost",
+    "description": "Transform past challenges into rich wisdom. Nothing is wasted—experience breaks down and feeds the next season.",
+    "prompts": [
+      "What difficult experience holds hidden nutrients?",
+      "What lesson is ready to feed your next step?"
+    ],
+    "action": "Journal for 5 minutes: "The gift inside this challenge was…" and list three insights.",
+    "tags": ["theme:transformation", "energy:alchemy", "season:any"],
+    "image": "compost.png"
+  },
+  {
+    "id": "renew",
+    "title": "Renew",
+    "description": "Step into fresh possibility. After release, renewal arrives—subtle at first, then steady. Welcome the new with gentleness.",
+    "prompts": [
+      "What wants to begin again—in a simpler way?",
+      "Which small ritual will mark your fresh start?"
+    ],
+    "action": "Change something symbolic today (fresh sheets, cleaned desk, a new route) to signal renewal.",
+    "tags": ["theme:transformation", "energy:rebirth", "season:winter"],
+    "image": "renew.png"
+  }
+]

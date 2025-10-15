@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Reset Tools</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            background: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .button:hover {
+            background: #3182ce;
+        }
+        .button.danger {
+            background: #e53e3e;
+        }
+        .button.danger:hover {
+            background: #c53030;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .status.success {
+            background: #c6f6d5;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+        .status.error {
+            background: #fed7d7;
+            color: #822727;
+            border: 1px solid #fc8181;
+        }
+        .current-state {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .current-state pre {
+            margin: 0;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Rooted & Growing Admin Tools</h1>
+        
+        <div class="current-state">
+            <strong>Current Storage State:</strong>
+            <pre id="currentState">Loading...</pre>
+        </div>
+
+        <button class="button" onclick="resetOnboarding()">
+            🔄 Reset Onboarding (Testing)
+        </button>
+
+        <button class="button" onclick="resetDailyDraw()">
+            🎴 Reset Daily Draw
+        </button>
+
+        <button class="button danger" onclick="clearAllData()">
+            🗑️ Clear All Data (Danger!)
+        </button>
+
+        <div class="status" id="status"></div>
+
+        <button class="button" onclick="refreshState()">
+            🔍 Refresh Current State
+        </button>
+    </div>
+
+    <script>
+        function showStatus(message, type = 'success') {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 5000);
+        }
+
+        function getCurrentState() {
+            const state = {};
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.startsWith('@')) {
+                    state[key] = JSON.parse(localStorage.getItem(key) || 'null');
+                }
+            }
+            return state;
+        }
+
+        function refreshState() {
+            const state = getCurrentState();
+            document.getElementById('currentState').textContent = JSON.stringify(state, null, 2);
+        }
+
+        function resetOnboarding() {
+            try {
+                // Get current preferences or create default
+                const currentPrefs = JSON.parse(localStorage.getItem('@rooted_user_preferences') || '{}');
+                
+                // Reset onboarding
+                const newPrefs = {
+                    ...currentPrefs,
+                    onboardingComplete: false,
+                    onboardingData: undefined
+                };
+                
+                localStorage.setItem('@rooted_user_preferences', JSON.stringify(newPrefs));
+                
+                showStatus('✅ Onboarding reset complete! Refresh the main app to see the onboarding flow.', 'success');
+                refreshState();
+            } catch (error) {
+                showStatus('❌ Error: ' + error.message, 'error');
+            }
+        }
+
+        function resetDailyDraw() {
+            try {
+                localStorage.removeItem('@rooted_last_draw_date');
+                localStorage.removeItem('@rooted_last_drawn_card');
+                
+                showStatus('✅ Daily draw reset complete! Navigate to Daily Draw tab to shuffle again.', 'success');
+                refreshState();
+            } catch (error) {
+                showStatus('❌ Error: ' + error.message, 'error');
+            }
+        }
+
+        function clearAllData() {
+            if (confirm('⚠️ DANGER: This will delete ALL app data including journal entries, preferences, and reset everything to initial state. This action CANNOT be undone.\n\nAre you absolutely sure?')) {
+                try {
+                    const keysToRemove = [];
+                    for (let i = 0; i < localStorage.length; i++) {
+                        const key = localStorage.key(i);
+                        if (key && key.startsWith('@')) {
+                            keysToRemove.push(key);
+                        }
+                    }
+                    
+                    keysToRemove.forEach(key => localStorage.removeItem(key));
+                    
+                    showStatus('✅ All data cleared! The app has been reset to its initial state. Refresh the main app.', 'success');
+                    refreshState();
+                } catch (error) {
+                    showStatus('❌ Error: ' + error.message, 'error');
+                }
+            }
+        }
+
+        // Initialize on load
+        refreshState();
+    </script>
+</body>
+</html>

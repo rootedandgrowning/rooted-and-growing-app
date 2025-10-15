@@ -1,0 +1,17 @@
+          {/* Profile - Admin Only */}
+          {user?.is_admin && (
+            <MenuItem
+              icon="person"
+              title="Profile"
+              subtitle="Personalization & cosmic blueprint"
+              onPress={() => router.push('/profile')}
+            />
+          )}
+
+          {/* Notifications */}
+          <MenuItem
+            icon="notifications"
+            title="Notifications"
+            subtitle="Daily and weekly reminder settings"
+            onPress={() => router.push('/notifications')}
+          />

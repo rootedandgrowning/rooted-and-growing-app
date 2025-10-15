@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Rooted and Growing App",
+    "slug": "rooted-and-growing",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rootedandgrowing",
+    "userInterfaceStyle": "light",
+    "description": "Nurture Your Inner Garden",
+    "sku": "rootedgrowingapp-ios",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F8F3ED"
+    },
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rootedandgrowing.oracle",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan QR codes for unlocking premium features.",
+        "NSPhotoLibraryUsageDescription": "This app accesses your photo library to save oracle card images.",
+        "NSUserNotificationsUsageDescription": "This app sends gentle daily reminders for your oracle card practice."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#F8F3ED"
+      },
+      "package": "com.rootedandgrowing.oracle",
+      "versionCode": 1,
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-router",
+      "expo-dev-client"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}

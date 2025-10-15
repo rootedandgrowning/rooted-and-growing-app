@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Admin Functions</title>
+</head>
+<body>
+    <h1>Admin Functions Test</h1>
+    <button onclick="testResetOnboarding()">Test Reset Onboarding</button>
+    <button onclick="testResetDailyDraw()">Test Reset Daily Draw</button>
+    <button onclick="testClearAllData()">Test Clear All Data</button>
+    
+    <div id="output"></div>
+
+    <script>
+        function log(message) {
+            document.getElementById('output').innerHTML += '<p>' + message + '</p>';
+            console.log(message);
+        }
+
+        function testResetOnboarding() {
+            try {
+                log('Testing reset onboarding...');
+                // Check current preferences
+                const currentPrefs = localStorage.getItem('@rooted_user_preferences');
+                log('Current preferences: ' + currentPrefs);
+                
+                // Reset onboarding
+                const newPrefs = JSON.stringify({
+                    onboardingComplete: false,
+                    lastDrawDate: null,
+                    dailyReminderEnabled: false,
+                    weeklyReminderEnabled: false,
+                    seasonalTheme: 'autumn'
+                });
+                localStorage.setItem('@rooted_user_preferences', newPrefs);
+                log('✅ Onboarding reset complete!');
+                log('New preferences: ' + localStorage.getItem('@rooted_user_preferences'));
+            } catch (error) {
+                log('❌ Error: ' + error.message);
+            }
+        }
+
+        function testResetDailyDraw() {
+            try {
+                log('Testing reset daily draw...');
+                localStorage.removeItem('@rooted_last_draw_date');
+                localStorage.removeItem('@rooted_last_drawn_card');
+                log('✅ Daily draw reset complete!');
+            } catch (error) {
+                log('❌ Error: ' + error.message);
+            }
+        }
+
+        function testClearAllData() {
+            try {
+                log('Testing clear all data...');
+                const keysToRemove = [];
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    if (key && key.startsWith('@')) {
+                        keysToRemove.push(key);
+                    }
+                }
+                log('Keys to remove: ' + keysToRemove.join(', '));
+                keysToRemove.forEach(key => localStorage.removeItem(key));
+                log('✅ All data cleared!');
+            } catch (error) {
+                log('❌ Error: ' + error.message);
+            }
+        }
+
+        // Show current state on load
+        log('=== Current LocalStorage State ===');
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('@')) {
+                log(key + ': ' + localStorage.getItem(key));
+            }
+        }
+    </script>
+</body>
+</html>
