@@ -8,9 +8,8 @@
     "scheme": "rootedandgrowing",
     "userInterfaceStyle": "light",
     "description": "Nurture Your Inner Garden",
-    "sku": "rootedgrowingapp-ios",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash-image.png",
       "resizeMode": "contain",
       "backgroundColor": "#F8F3ED"
     },
@@ -18,7 +17,8 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.rootedandgrowing.oracle",
-      "buildNumber": "1.0.0",
+      "buildNumber": "1",
+      "deploymentTarget": "13.4",
       "infoPlist": {
         "NSCameraUsageDescription": "This app uses the camera to scan QR codes for unlocking premium features.",
         "NSPhotoLibraryUsageDescription": "This app accesses your photo library to save oracle card images.",
