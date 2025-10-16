@@ -8,31 +8,34 @@
       "developmentClient": true,
       "distribution": "internal",
       "ios": {
-        "bundleIdentifier": "com.rootedandgrowing.oracle",
-        "resourceClass": "default"
+        "resourceClass": "default",
+        "simulator": false
       },
       "env": {
-        "EXPO_PUBLIC_APPLE_SUBMISSION_MODE": "true"
+        "EXPO_PUBLIC_APPLE_SUBMISSION_MODE": "true",
+        "NODE_VERSION": "20.19.4"
       }
     },
     "preview": {
       "distribution": "internal",
       "ios": {
-        "bundleIdentifier": "com.rootedandgrowing.oracle",
-        "resourceClass": "default"
+        "resourceClass": "default",
+        "simulator": true
       },
       "env": {
-        "EXPO_PUBLIC_APPLE_SUBMISSION_MODE": "true"
+        "EXPO_PUBLIC_APPLE_SUBMISSION_MODE": "true",
+        "NODE_VERSION": "20.19.4"
       }
     },
     "production": {
       "distribution": "store",
       "ios": {
-        "bundleIdentifier": "com.rootedandgrowing.oracle",
-        "resourceClass": "default"
+        "resourceClass": "default",
+        "simulator": false
       },
       "env": {
-        "EXPO_PUBLIC_APPLE_SUBMISSION_MODE": "true"
+        "EXPO_PUBLIC_APPLE_SUBMISSION_MODE": "true",
+        "NODE_VERSION": "20.19.4"
       }
     }
   },
